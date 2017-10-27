@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>关于页</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/first_page.css" />
+		<link rel="stylesheet" type="text/css" href="css/fontx.css" />
+		<!--轮播特效-->
+		<link rel="stylesheet" type="text/css" href="css/htmleaf-demo3.css" />
+		<link rel="stylesheet" type="text/css" href="css/htmleaf-demo3.css" />
+		<link rel="stylesheet" type="text/css" href="themes/csslider.default.css" />
+		<!--scoll插件引入-->
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Raleway:400,700|Lato);
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			 ::-webkit-scrollbar {
+				width: 2px;
+				background: rgba(255, 255, 255, 0.1);
+			}
+			
+			 ::-webkit-scrollbar-track {
+				background: none;
+			}
+			
+			 ::-webkit-scrollbar-thumb {
+				background: rgba(74, 168, 0, 0.6);
+			}
+			
+			ul,
+			ol {
+				padding-left: 40px;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				text-align: center;
+				/*font: 400 100% 'Raleway', 'Lato';*/
+				/*background-color: #282828;*/
+				/*color: #CCC;*/
+			}
+			
+			h1 {
+				font-weight: 700;
+				font-size: 310%;
+			}
+			
+			h2 {
+				font-weight: 400;
+				font-size: 120%;
+				color: #71AD37;
+			}
+			
+			#slider1 {
+				margin: 20px;
+				font-family: 'Lato';
+			}
+			
+			#slider1>ul>li:nth-of-type(3) {
+				background: url(img/banner.jpg);
+			}
+			
+			#slider1>ul>li:nth-of-type(2) {
+				background: url(img/banner2.jpg);
+			}
+			
+			#slider1>ul>li:nth-of-type(1) {
+				background: url(img/banner3.jpg);
+			}
+			
+			#slider1>ul>li:nth-of-type(4) {
+				background: url(img/banner6.jpg);
+			}
+			
+			#slider1>input:nth-of-type(3):checked~ul .bg1,
+			#slider1>input:nth-of-type(1):checked~ul .bg3,
+			#slider1>input:nth-of-type(4):checked~ul .bg4 {
+				width: 80%;
+				padding: 22px;
+				-moz-transition: .5s .5s;
+				-o-transition: .5s .5s;
+				-webkit-transition: .5s .5s;
+				transition: .5s .5s;
+			}
+			
+			#slider1>input:nth-of-type(2):checked~ul .bg2 {
+				width: 80%;
+				padding: 22px;
+				-moz-transition: .5s .5s;
+				-o-transition: .5s .5s;
+				-webkit-transition: .5s .5s;
+				transition: .5s .5s;
+			}
+			
+			#slider1>input:nth-of-type(3):checked~ul .bg1 div,
+			#slider1>input:nth-of-type(1):checked~ul .bg3 div,
+			#slider1>input:nth-of-type(4):checked~ul .bg4 div {
+				-moz-transform: translate(0);
+				-ms-transform: translate(0);
+				-o-transform: translate(0);
+				-webkit-transform: translate(0);
+				transform: translate(0);
+				-moz-transition: .5s .9s;
+				-o-transition: .5s .9s;
+				-webkit-transition: .5s .9s;
+				transition: .5s .9s;
+			}
+			
+			#slider1>input:nth-of-type(2):checked~ul .bg2 div {
+				-moz-transform: translate(0);
+				-ms-transform: translate(0);
+				-o-transform: translate(0);
+				-webkit-transform: translate(0);
+				transform: translate(0);
+				-moz-transition: .5s .9s;
+				-o-transition: .5s .9s;
+				-webkit-transition: .5s .9s;
+				transition: .5s .9s;
+			}
+			
+			.bg {
+				color: #FFFFFF;
+				padding: 22px 0;
+				position: absolute;
+				left: 0;
+				top: 16%;
+				height: 20%;
+				width: 0;
+				z-index: 10;
+				overflow: hidden;
+			}
+			
+			.bg1:before {
+				content: '';
+				position: absolute;
+				left: -1px;
+				top: 1px;
+				height: 100%;
+				width: 100%;
+				z-index: -1;
+				background: url(img/banner.jpg) 1px 23%;
+				-webkit-filter: blur(7px);
+			}
+			
+			.bg2:before {
+				content: '';
+				position: absolute;
+				left: -1px;
+				top: 1px;
+				height: 100%;
+				width: 100%;
+				z-index: -1;
+				background: url(img/banner2.jpg) 1px 23%;
+				-webkit-filter: blur(7px);
+			}
+			
+			.bg3:before {
+				content: '';
+				position: absolute;
+				left: -1px;
+				top: 1px;
+				height: 100%;
+				width: 100%;
+				z-index: -1;
+				background: url(img/banner3.jpg) 1px 23%;
+				-webkit-filter: blur(7px);
+			}
+			
+			.bg4:before {
+				content: '';
+				position: absolute;
+				left: -1px;
+				top: 1px;
+				height: 100%;
+				width: 100%;
+				z-index: -1;
+				background: url(img/banner6.jpg) 1px 23%;
+				-webkit-filter: blur(7px);
+			}
+			
+			.bg1:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 20;
+				background: rgba(0, 0, 0, 0.25);
+				pointer-events: none;
+			}
+			
+			.bg2:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 20;
+				background: rgba(0, 0, 0, 0.25);
+				pointer-events: none;
+			}
+			
+			.bg3:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 20;
+				background: rgba(0, 0, 0, 0.25);
+				pointer-events: none;
+			}
+			
+			.bg4:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 20;
+				background: rgba(0, 0, 0, 0.25);
+				pointer-events: none;
+			}
+			
+			.bg div {
+				-moz-transform: translate(120%);
+				-ms-transform: translate(120%);
+				-o-transform: translate(120%);
+				-webkit-transform: translate(120%);
+				transform: translate(120%);
+			}
+			
+			.scrollable p {
+				padding: 30px;
+				text-align: justify;
+				line-height: 140%;
+				font-size: 120%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--首页顶部导航栏-->
+		<div class="top_nav">
+			<div class="container_nav clearfix">
+				<div class="logo fl">
+					<a href="index.html" class="trans5"><img src="img/logo.png" /></a>
+				</div>
+				<ul class="fr clearfix">
+					<li class="fl">
+						<a href="index.html" class="ttp">首页</a>
+					</li>
+
+					<li class="fl relative drdc">
+						<a href="exoplmpe.html" class="ch_shop ttp">产品 <span class="cart"></span></a>
+
+						<ul class="dropdpwn_meau">
+							<li>
+								<a href="#">家庭影院</a>
+							</li>
+							<li>
+								<a href="#">HiFi发烧</a>
+							</li>
+							<li>
+								<a href="#">3D屏幕</a>
+							</li>
+							<li>
+								<a href="#">多功能会议</a>
+							</li>
+						</ul>
+					</li>
+					<li class="fl relative  news_dr">
+						<a href="news.html" class="ttp">新闻 <span class="cart"></span></a>
+
+						<ul class="dropdpwn_meau_ne">
+							<li>
+								<a href="#" class="">公司动态</a>
+							</li>
+							<li>
+								<a href="#" class="">行业资讯</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="fl">
+						<a href="about_page.html" class="ttp">关于</a>
+					</li>
+					<li class="fl">
+						<a href="about_page.html" class="ttp">案例</a>
+					</li>
+					<li class="fl">
+						<a href="lianxiye.html" class="ttp">联系</a>
+					</li>
+					<li class="search fl">
+						<a href="#" class="ttp">
+							<i class="iconfont icom_search">&#xe60d;</i>
+
+						</a>
+						<form class="search_box">
+
+							<input type="text" name="" id="" value="" class="text relative" />
+
+							<i class="iconfont fasearch fa">&#xe60d;</i>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--中部banner页-->
+		<div class="about_page_banner"></div>
+		<!--文字-->
+		<div class="docu_sing">
+			<div class="docu_sing_container">
+				<h3 class="title_h3 trans5 wow bounceInUp" data-wow-duration="1s" data-wow-delay="">关于科技& 声音</h3>
+				<p class="trans5 wow bounceInUp" data-wow-duration="1s" data-wow-delay="">&nbsp;
+					<br>拥有最无敌的创意、最精美的视觉、最具国际化的意识和前瞻性思维！
+					<br>自1991年公司创立至今，历经三十余载，始终坚持从事高档精品科技设计，成就经典品牌。
+					<br>科技网有限公司坐落于“中国制造重镇” —— 广东省揭阳市。
+				</p>
+				<div class="nver_b">
+					<ul class="claearfix wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+						<li>
+							<div class="nver_b_one november1">096</div>
+							<div class="nver_b_two">products</div>
+						</li>
+						<li class="excpoi">
+							<div class="nver_b_one november2">2046</div>
+							<div class="nver_b_two">coffee</div>
+						</li>
+						<li>
+							<div class="nver_b_one november3">887</div>
+							<div class="nver_b_two">days</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="docu_sing">
+			<div class="docu_sing_container">
+				<h3 class="title_h3 trans5 wow flipInX" data-wow-duration="1s" data-wow-delay="0.2s">系统SCI 无线音箱</h3>
+				<p class="trans5 wow flipInX" data-wow-duration="1s" data-wow-delay="0.4s">&nbsp;
+					<br>系统是由多个物质组成，每一个物质都有一个或多个属性，每个属性都有状态的值，有的是变量，
+					<br>有的属性分为多个子属性，每个子属性也有状态的值，通俗的说，属性值就是物质的状态；规则就是各种属性怎样相互作用，
+					<br>分为同种属性的相互作用和不同属性的相互作用，规则发生的过程就是事件，用原因与结果、
+					<br>前提条件、触发条件、目的来描述规则，规则规定了物质（系统）的变化方式。
+				</p>
+
+			</div>
+		</div>
+		<div class="docu_sing_container">
+			<div style="padding: 1em 0;">
+				<!--<h2>Pure CSS Slider. No JS. Because it's possieble!</h2>-->
+				<div id="slider1" class="csslider" style="width: 100%;">
+					<input type="radio" name="slides" id="slides_1" />
+					<input type="radio" name="slides" id="slides_2" />
+					<input type="radio" name="slides" id="slides_3" />
+					<input type="radio" name="slides" id="slides_4" checked/>
+					<ul style="width: 100%;height: 450px;">
+						<li>
+							<div class="bg bg3">
+								<div>
+									<h1>系统SCI无线音箱</h1>
+									<p style="color: white;">系统是由多个物质组成，每一个物质都有一个或多个属性，每个属性都有状态的值，有的是变量，</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="bg bg2">
+								<div>
+									<h1>系统SCI无线音箱</h1>
+									<p style="color: white;">系统是由多个物质组成，每一个物质都有一个或多个属性，每个属性都有状态的值，有的是变量，</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="bg bg1">
+								<div>
+									<h1>系统SCI无线音箱</h1>
+									<p style="color: white;">系统是由多个物质组成，每一个物质都有一个或多个属性，每个属性都有状态的值，有的是变量，</p>
+								</div>
+							</div>
+						</li>
+						<li>
+						
+							<div class="bg bg4">
+								<div>
+									<h1>系统SCI无线音箱</h1>
+									<p style="color: white;">系统是由多个物质组成，每一个物质都有一个或多个属性，每个属性都有状态的值，有的是变量，</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="arrows">
+						<label for="slides_1"></label>
+						<label for="slides_2"></label>
+						<label for="slides_3"></label>
+						<label for="slides_4"></label>
+					</div>
+					<div class="navigation">
+						<div>
+							<label for="slides_1"></label>
+							<label for="slides_2"></label>
+							<label for="slides_3"></label>
+							<label for="slides_4"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="last_bttom_bg">
+			<p class="sc">科技网 版权所有2008-2016 湘ICP备8888888 本页面内容为网站演示数据。</p>
+			<p>Powered by MetInfo 5.3.12</p>
+
+		</div>
+		<!--回到顶部-->
+		<div class="fixed_box">
+			<i class="iconfont fixed_icon">&#xe6ee;</i>
+		</div>
+
+	</body>
+
+</html>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/scoll.js" type="text/javascript" charset="utf-8"></script>
+<script src="" type="text/javascript" charset="utf-8"></script>
+<script src="js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var timer1 = null
+		var timer2 = null
+		var timer3 = null
+		var a = 0
+
+		function open1() {
+			$(".november1").text(a = a + 1)
+
+			if(a > 1024) {
+				$(".november1").text(1024)
+			}
+			return
+		}
+
+		function open2() {
+			$(".november2").text(a = a + 2)
+			if(a > 2046) {
+				$(".november2").text(2046)
+			}
+			return
+		}
+
+		function open3() {
+			$(".november3").text(a = a + 1)
+			if(a > 1887) {
+				$(".november3").text(1887)
+			}
+			return
+		}
+
+		$(window).scroll(function() {
+			var h = $(this).scrollTop();
+
+			if(h < 400) {
+				//						clearInterval(timer1,timer2,timer3)
+				//					$(".november1").text(0)
+				//					$(".november2").text(0)
+				//					$(".november3").text(0)
+			} else {
+				timer1 = setInterval(open1, 20)
+				timer2 = setInterval(open2, 1)
+				timer3 = setInterval(open3, 30)
+
+			}
+
+		})
+	})
+</script>
+<script type="text/javascript">
+	if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+		new WOW().init();
+	};
+</script>
