@@ -1,0 +1,398 @@
+@CHARSET "UTF-8";
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+.user-ui-page {
+	position: relative;
+	width:100%;
+	max-width:640px;
+	margin:0px auto;
+}
+
+.public_section .href_info {
+	position: relative;
+	padding-right: 30px;
+}
+
+.public_section .href_info:after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	margin-top: -5px;
+	right: 15px;
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	top: 50%;
+	border-color: #444;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+}
+
+.user-ui-header {
+	font-size: 20px;
+	color: #ffffff;
+	background: #b3a99f;
+	line-height: 50px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
+
+.user-ui-header .left-bar {
+	float: left;
+	padding-left: 10px;
+	color: #ffffff;
+}
+
+.user-ui-header .right-bar {
+	float: right;
+	padding-right: 10px;
+	color: #ffffff;
+}
+
+.user-ui-content {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	padding: 50px 0px 55px 0px;
+	margin-bottom: -50px;
+	font-family:"微软雅黑";
+}
+
+.user-ui-footer {
+	background-color: #b3a99f;
+	height: 50px;
+}
+
+.user-ui-footer .copyright {
+	width: 100%;
+	font-size: 20px;
+	color: #ffffff;
+	line-height: 50px;
+	text-align: center;
+}
+
+.user-ui-panel {
+	width: 100%;
+	padding-top: 50px;
+	margin-bottom: 0px;
+	position: relative;
+	overflow: hidden;
+}
+
+.user-text-center {
+	padding: 0px 10px;
+	text-align: center;
+}
+
+.theme-dapu-bg{
+	background-color:#b3a99f;
+}
+
+.font-default{
+	color:#b3a99f;
+}
+
+.font-white{
+	color:#ffffff;
+}
+
+.navbar a.font-white{
+	color:#ffffff;
+}
+
+.nav>li>a.font-white{
+	color:#ffffff;
+}
+.padding-none{
+	padding:0 0;
+}
+.margin-none{
+	margin:0 0;
+}
+
+.m_5_0{
+	margin:5px 0;
+}
+
+.m_10_0{
+	margin:10px 0;
+}
+
+.m_15_0{
+	margin:15px 0;
+}
+
+.m_20_0{
+	margin:20px 0;
+}
+
+.m_5_5{
+	margin:5px 5px;
+}
+
+.m_10_10{
+	margin:10px 10px;
+}
+
+.m_15_15{
+	margin:15px 15px;
+}
+
+.m_20_20{
+	margin:20px 20px;
+}
+
+.m_0_5{
+	margin:0 5px;
+}
+
+.m_0_10{
+	margin:0 10px;
+}
+
+.m_0_15{
+	margin:0 15px;
+}
+
+.m_0_20{
+	margin:0 20px;
+}
+
+.dp-menu-box{
+	width:100%;
+	padding:5px;
+	background-color:#f6f5f1;
+}
+
+.dp-menu-box .menu-cart-btn{
+    color:#b3a99f;
+    width:30%;
+    text-align: center;
+    position: relative;
+}
+
+.dp-menu-box .menu-btn{
+	color:#b3a99f;
+	width:20%;
+	text-align: center;
+	position: relative;
+}
+
+.dp-menu-box .menu-btn:hover{
+	color:red;
+	text-decoration: none;
+}
+
+.dp-menu-box .menu-img{
+	font-size:20px;
+}
+
+.dp-menu-box .login-tag{
+	display:none;
+	position: absolute;
+	top:0px;
+	right:10px;
+	width:10px;
+	height:10px;
+	border-radius:10px;
+	background-color:red;
+	animation:myfirst 5s;
+	-moz-animation:myfirst 5s; /* Firefox */
+	-webkit-animation:myfirst 5s; /* Safari and Chrome */
+	-o-animation:myfirst 5s; /* Opera */
+	animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+	-moz--animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+	-webkit-animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+	-o-animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+}
+
+@keyframes myfirst
+{
+	from {
+	width:10px;
+	height:10px;
+	background:yellow;
+	}
+	to {
+	width:10px;
+	height:10px;
+	background:red;
+	}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+	from {
+	width:10px;
+	height:10px;
+	background:yellow;
+	}
+	to {
+	width:10px;
+	height:10px;
+	background:red;
+	}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	from {
+	width:10px;
+	height:10px;
+	background:yellow;
+	}
+	to {
+	width:10px;
+	height:10px;
+	background:red;
+	}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+	from {
+	width:10px;
+	height:10px;
+	background:yellow;
+	}
+	to {
+	width:10px;
+	height:10px;
+	background:red;
+	}
+}
+
+.dp-logo-box{
+	width:100%;
+	padding:2px 0px;
+}
+.dp-slogan{
+	margin:0 0;
+	padding:0 0;
+	font-size:12px;
+	line-height:30px;
+	font-family: "微软雅黑";
+}
+
+.dp-header{
+	width:100%;
+	max-width:640px;
+	margin:0px auto;
+}
+
+.dp-main{
+	width:100%;
+	max-width:640px;
+	margin:0px auto;
+}
+
+.container{
+	max-width:640px;
+}
+
+.dp-footer{
+	position: relative;
+	height:60px;
+}
+
+/* 轮播样式开始 */
+.user-swipe-page {
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	padding: 0px 0px 10px 0px;
+}
+
+.user-swipe-page .swipe {
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+}
+
+.user-swipe-page .swipe-wrap {
+	overflow: hidden;
+	position: relative;
+}
+
+.user-swipe-page .swipe-wrap>div {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+.user-swipe-page .swipe-wrap .wrap {
+	display: block;
+	position: relative;
+}
+
+.user-swipe-page .swipe-wrap a {
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+}
+
+.user-swipe-page .swipe-wrap img {
+	border: 0px;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.user-swipe-page .swipe-nav {
+	position: relative;
+	max-width: 680px;
+	margin: -36px auto 0;
+}
+
+.user-swipe-page .swipe-nav .position {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.user-swipe-page .swipe-nav .position li {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background: #141414;
+	box-shadow: inset 0 1px 3px black, 0 0 1px 1px #202020;
+	margin: 0 2px;
+	cursor: pointer;
+}
+
+.user-swipe-page .swipe-nav .position li.on {
+	box-shadow: inset 0 1px 3px -1px #28b4ea, 0 1px 2px rgba(0, 0, 0, .5);
+	background-color: #1293dc;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1293dc),
+		color-stop(100%, #0f6297) );
+	background-image: -webkit-linear-gradient(top, #1293dc, #0f6297);
+	background-image: -moz-linear-gradient(top, #1293dc, #0f6297);
+	background-image: -ms-linear-gradient(top, #1293dc, #0f6297);
+	background-image: -o-linear-gradient(top, #1293dc, #0f6297);
+	background-image: linear-gradient(top, #1293dc, #0f6297)
+}
+/* 轮播样式结束 */
+.goods-item{
+	padding:5px 5px;
+	margin-bottom:5px;
+	position: relative;
+	border-radius:5px 5px;
+}
+.goods-item:nth-child(odd){
+	background-color:#efefef;
+}
+.goods-item:nth-child(even){
+	background-color:#f7f7f7;
+}
